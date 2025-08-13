@@ -113,6 +113,28 @@
       background: var(--accent-color);
       color: white;
     }
+
+      .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+    .project-grid div {
+      background: var(--card-bg);
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .project-grid div:hover {
+      transform: scale(1.05);
+      /* background: var(--accent-color); */
+      /* color: white; */
+    }
+    a{
+      color:var(--text-color);
+    }
     footer {
       background: #0d2538;
       color: #fff;
@@ -141,7 +163,7 @@
   <p>Product Web Associate | Web Designer | Frontend Developer</p>
 </header>
 
-<nav>
+<nav style="overflow-x: scroll;">
   <a href="#summary">Summary</a>
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
@@ -182,41 +204,41 @@
 
 <section id="projects">
   <h2>Projects</h2>
-  <div class="card">
-    <div style="display: flex;flex-direction: row;align-items: center;justify-content: space-around;">
-     <div>
-    <ul>
-      <li>KSA: <a target="_blank" href="https://www.cleartax.com/sa" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Malaysia: <a target="_blank" href="https://www.cleartax.com/my/en" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>France: <a target="_blank" href="https://www.cleartax.com/fr/en" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Singapore: <a target="_blank" href="https://www.cleartax.com/sg/e-invoicing-software" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>UAE: <a target="_blank" href="https://www.cleartax.com/ae" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Belgium: <a target="_blank" href="https://www.cleartax.com/be" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Global: <a target="_blank" href="https://www.cleartax.com/electronic-invoicing" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-     </div>
-     <div>
-      <li>Invoice discounting: <a target="_blank" href="https://www.clear.in/invoice-discounting?utm_ref=clear_webflow_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Account payable: <a target="_blank" href="https://www.clear.in/ap-automation-software" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Vendor mgmt: <a target="_blank" href="https://cleartax.in/vendor-management-software?utm_ref=clear_webflow_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>FMCG: <a target="_blank" href="https://www.clear.in/fmcg-solutions?utm_ref=undefined_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Beyond: <a target="_blank" href="https://www.cleartax.com/sa/beyond-event" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Announcenent: <a target="_blank" href="https://www.cleartax.com/sa/announcements" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Trust and security: <a target="_blank" href="https://cleartax.in/s/trust?utm_ref=clear_webflow_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li> 
-    </div>
-    <div>
-      <li>Supply chain: <a target="_blank" href="https://cleartax.in/supply-chain-automation-solution?utm_ref=%2Fs%2Fv2%2Fhomev1%2F_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Support: <a target="_blank" href="https://www.clear.in/s/contact-us?utm_ref=%2Fs%2Fv2%2Fhomev1%2F_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Manufacturing: <a target="_blank" href="https://www.clear.in/manufacturing-solutions?utm_ref=undefined_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Logistics: <a target="_blank" href="https://www.clear.in/logistics-solutions?utm_ref=undefined_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Automotive: <a target="_blank" href="https://www.clear.in/automotive-solutions?utm_ref=clear_webflow_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
-      <li>Prime time: <a target="_blank" href="https://cleartax.in/s/mission-absolute-control" style="color: #1e88e5;text-decoration: none;">website link</a></li> 
-      <li>Case studies: <a target="_blank" href="https://www.cleartax.com/sa/ksa-case-studies" style="color: #1e88e5;text-decoration: none;">website link</a></li>       
-    </div>
-    </ul>
-    </div>
-  </div>
+  <div class="project-grid">
+    <div><a href="https://www.cleartax.com/sa" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">KSA LP</a></div>
+    <div><a href="https://www.cleartax.com/my/en" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Malaysia LP</a></div>
+    <div><a href="https://www.cleartax.com/fr/en" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">France LP</a></div>
+    <div><a href="https://www.cleartax.com/sg/e-invoicing-software" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Singapore LP</a></div>
+    <div><a href="https://www.cleartax.com/ae" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">UAE LP</a></div>
+    <div><a href="https://www.cleartax.com/be" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Belgium</a></div>
+    <div><a href="https://www.cleartax.com/electronic-invoicing" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Global</a></div>
+    <div><a href="https://www.clear.in/ap-automation-software" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Account payable</a></div>
+    <div><a href="https://cleartax.in/vendor-management-software" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">vendor-management-software</a></div>
+    <div><a href="https://www.cleartax.com/sa/beyond-event" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Beyond Event</a></div>
+    <div><a href="https://www.cleartax.com/om" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Oman LP</a></div>
+    <div><a href="https://www.cleartax.com/bh" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Bahrain LP</a></div>
+    <div><a href="https://www.clear.tech" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Arrox LP</a></div>
+    <div><a href="https://einvoice4.gst.gov.in/t" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">ClearIRP</a></div>
 
-</section>
+  </div>
+    <div class="project-grid" style="margin-top: 20px;">
+    <div><a href="https://cleartax.in/supply-chain-automation-solution" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Supply chain automation</a></div>
+    <div><a href="https://www.clear.in/invoice-discounting" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Invoice discounting</a></div>
+    <div><a href="https://cleartax.in/s/mission-absolute-control" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Prime time</a></div>
+    <div><a href="https://cleartax.in/s/tax-webinar" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Taxhack webinar</a></div>
+    <div><a href="https://www.cleartax.in/s/clear-compliance-cloud-lp" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Notice microsite</a></div>
+    <div><a href="https://www.cleartax.in/s/invoice-management-system-gst-ims-solution" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Invoice mgmt system</a></div>
+    <div><a href="https://clear.in/s/secretarial-automation-software" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Cimplyfive</a></div>
+    <div><a href="https://tenacity.vc" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Tenacity</a></div>
+    <div><a href="https://cleartax.in/s/trust" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Trust & security</a></div>
+    <div><a href="https://clear.in/s/contact-us" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Contact us</a></div>
+    <div><a href="https://www.cleartax.com/sa/announcements" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Announcement KSA</a></div>
+    <div><a href="https://www.clear.in/fmcg-solutions" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">FMCG</a></div>  
+    <div><a href="https://www.clear.in/automotive-solutions" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Automotive</a></div>  
+    <div><a href="https://www.clear.in/logistics-solutions" target="_blank" style="text-decoration:underline;text-decoration-color:#64b5f6;">Logistics</a></div>  
+
+  </div>
+  </section>
 
 <section id="skills">
   <h2>Skills</h2>
@@ -275,3 +297,4 @@
 
 </body>
 </html>
+
