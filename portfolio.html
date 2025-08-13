@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akarshan Kumar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f5f7fa;
+      --text-color: #333;
+      --card-bg: #fff;
+      --accent-color: #1e88e5;
+    }
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+      --card-bg: #1e1e1e;
+      --accent-color: #64b5f6;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(to right, #1e88e5, #1565c0);
+      color: white;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      animation: fadeInDown 1s ease;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-top: 0.5rem;
+      animation: fadeInUp 1s ease;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--card-bg);
+      padding: 0.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent-color);
+    }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3rem 1rem;
+    }
+    h2 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: var(--accent-color);
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+    .skills-grid div {
+      background: var(--card-bg);
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .skills-grid div:hover {
+      transform: scale(1.05);
+      background: var(--accent-color);
+      color: white;
+    }
+    footer {
+      background: #0d2538;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    .toggle-theme {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <button class="toggle-theme" onclick="toggleTheme()">🌙 Dark Mode</button>
+  <h1>Akarshan Kumar</h1>
+  <p>Product Web Associate | Web Designer | Frontend Developer</p>
+</header>
+
+<nav>
+  <a href="#summary">Summary</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>  
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="summary">
+  <h2>Summary</h2>
+  <div class="card">
+    Detail-oriented and results-driven Product Web Associate with experience designing and developing high-performance landing pages using Webflow. Skilled in static and CMS-driven websites, page speed optimization, performance enhancement, and SEO best practices. Strong collaboration with stakeholders to align technical solutions with business goals.
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>ClearTax — Product Web Associate</h3>
+    <p><em>Nov 2022 – Aug 2025 | Bangalore Urban, Karnataka</em></p>
+    <ul>
+      <li>Developed international landing pages for multiple countries using Webflow.</li>
+      <li>Built static websites in English & Arabic.</li>
+      <li>Optimized SEO performance and page speed.</li>
+      <li>Created custom HTML for campaigns.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>ClearTax — Web Designer</h3>
+    <p><em>Sep 2021 – Nov 2022 | Bangalore Urban, Karnataka</em></p>
+    <ul>
+      <li>Designed responsive landing pages using Webflow.</li>
+      <li>Created CMS-driven pages for BFSI, Corporate, Payroll, and Crypto industries.</li>
+      <li>Redesigned pricing pages for better UX & conversions.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card">
+    <div style="display: flex;flex-direction: row;align-items: center;justify-content: space-around;">
+     <div>
+    <ul>
+      <li>KSA: <a target="_blank" href="https://www.cleartax.com/sa" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Malaysia: <a target="_blank" href="https://www.cleartax.com/my/en" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>France: <a target="_blank" href="https://www.cleartax.com/fr/en" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Singapore: <a target="_blank" href="https://www.cleartax.com/sg/e-invoicing-software" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>UAE: <a target="_blank" href="https://www.cleartax.com/ae" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Belgium: <a target="_blank" href="https://www.cleartax.com/be" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Global: <a target="_blank" href="https://www.cleartax.com/electronic-invoicing" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+     </div>
+     <div>
+      <li>Invoice discounting: <a target="_blank" href="https://www.clear.in/invoice-discounting?utm_ref=clear_webflow_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Account payable: <a target="_blank" href="https://www.clear.in/ap-automation-software" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Vendor mgmt: <a target="_blank" href="https://cleartax.in/vendor-management-software?utm_ref=clear_webflow_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>FMCG: <a target="_blank" href="https://www.clear.in/fmcg-solutions?utm_ref=undefined_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Beyond: <a target="_blank" href="https://www.cleartax.com/sa/beyond-event" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Announcenent: <a target="_blank" href="https://www.cleartax.com/sa/announcements" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Trust and security: <a target="_blank" href="https://cleartax.in/s/trust?utm_ref=clear_webflow_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li> 
+    </div>
+    <div>
+      <li>Supply chain: <a target="_blank" href="https://cleartax.in/supply-chain-automation-solution?utm_ref=%2Fs%2Fv2%2Fhomev1%2F_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Support: <a target="_blank" href="https://www.clear.in/s/contact-us?utm_ref=%2Fs%2Fv2%2Fhomev1%2F_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Manufacturing: <a target="_blank" href="https://www.clear.in/manufacturing-solutions?utm_ref=undefined_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Logistics: <a target="_blank" href="https://www.clear.in/logistics-solutions?utm_ref=undefined_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Automotive: <a target="_blank" href="https://www.clear.in/automotive-solutions?utm_ref=clear_webflow_pages_navbar" style="color: #1e88e5;text-decoration: none;">website link</a></li>
+      <li>Prime time: <a target="_blank" href="https://cleartax.in/s/mission-absolute-control" style="color: #1e88e5;text-decoration: none;">website link</a></li> 
+      <li>Case studies: <a target="_blank" href="https://www.cleartax.com/sa/ksa-case-studies" style="color: #1e88e5;text-decoration: none;">website link</a></li>       
+    </div>
+    </ul>
+    </div>
+  </div>
+
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div>Frontend Dev</div>
+    <div>Webflow</div>
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>JavaScript</div>
+    <div>React (Basics)</div>
+    <div>SEO</div>
+    <div>CMS</div>
+    <div>Web Performance</div>
+    <div>Responsive Design</div>
+    <div>Figma</div>
+    <div>Wire-frame</div>
+    <div>Testing</div>
+    <div>Retool</div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="card">
+    <p><strong>Galgotias College of Engineering and Technology</strong></p>
+    <p>B.Tech — Instrumentation & Control Engineering (2019)</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p><strong>Phone:</strong> 8373966696</p>
+    <p><strong>Email:</strong> <a href="mailto:akusitamarhi123@gmail.com">akusitamarhi123@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/akarshan-kumar-6592b2155" target="_blank">View Profile</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Akarshan Kumar. All Rights Reserved.</p>
+</footer>
+
+<script>
+  function toggleTheme() {
+    const body = document.body;
+    const btn = document.querySelector('.toggle-theme');
+    if (body.getAttribute('data-theme') === 'dark') {
+      body.removeAttribute('data-theme');
+      btn.textContent = '🌙 Dark Mode';
+    } else {
+      body.setAttribute('data-theme', 'dark');
+      btn.textContent = '☀️ Light Mode';
+    }
+  }
+</script>
+
+</body>
+</html>
