@@ -54,9 +54,35 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+        /* Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Back to top button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 15px;
+      background: var(--accent-color);
+      color: white;
+      padding: 0.6rem 0.9rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      z-index: 100;
+    }
+    #backToTop:hover { background: #1565c0; }
     nav {
       display: flex;
-      justify-content: space-around;
+      justify-content:space-around;
       background: var(--card-bg);
       padding: 0.5rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -135,11 +161,29 @@
     a{
       color:var(--text-color);
     }
-    footer {
+    /* footer {
       background: #0d2538;
       color: #fff;
       text-align: center;
       padding: 1rem;
+    } */
+     footer{
+      background: linear-gradient(135deg, #0d2538, #1e3c72, #2a5298);
+      background-size: 400% 400%;
+      animation: footerGradient 10s ease infinite;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    }
+    @keyframes footerGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     .toggle-theme {
       position: absolute;
@@ -159,6 +203,7 @@
 
 <header>
   <button class="toggle-theme" onclick="toggleTheme()">🌙 Dark Mode</button>
+  <p style="font-family: cursive;">Hello, I'm</p>
   <h1>Akarshan Kumar</h1>
   <p>Product Web Associate</p>
 </header>
@@ -281,6 +326,8 @@
   <p>© 2025 Akarshan Kumar. All Rights Reserved.</p>
 </footer>
 
+<div id="backToTop">⬆</div>
+
 <script>
   function toggleTheme() {
     const body = document.body;
@@ -293,10 +340,15 @@
       btn.textContent = '☀️ Light Mode';
     }
   }
+    // Back to top
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 </script>
-
 </body>
 </html>
-
-
 
